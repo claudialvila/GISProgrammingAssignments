@@ -59,8 +59,8 @@ data = [['Alabama', ['Autauga', 'Baldwin', 'Barbour', 'Bibb', 'Blount', 'Bullock
 states_dict = dict(data)
 states = list(states_dict.keys())
 
-rand_state = states[random.randint(0, len(states))]
+rand_state = states[random.randint(0, (len(states)-1))]
 counties = states_dict[rand_state]
-rand_county = counties[random.randint(0, len(counties))]
+rand_county = counties[random.randint(0, (len(counties)-1))]
 
 print("Your next vacation destination is" + " " + rand_county + "," + " " + rand_state + "!!")
